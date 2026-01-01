@@ -1,7 +1,9 @@
 import os
 import shutil  # <--- New library for moving files
 
-TARGET_FOLDER = "."
+# Get the path to your User profile (e.g., C:\Users\Name or /Users/Name)
+user_path = os.path.expanduser("~")
+TARGET_FOLDER = os.path.join(user_path, "Downloads")
 
 EXTENSIONS = {
     "images": [".jpg", ".jpeg", ".png", ".gif", ".svg"],
